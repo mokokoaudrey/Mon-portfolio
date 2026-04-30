@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Data Analyst - Audrey Syril MOKOKO</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {font-family: 'Poppins', sans-serif; margin:0; background:#0f172a; color:#f1f5f9;}
+    header {padding:60px 20px; text-align:center; background:linear-gradient(135deg,#1e293b,#020617);} 
+    h1{margin:0;font-size:2.8em;} p{color:#94a3b8}
+    section{padding:50px 20px; max-width:1100px; margin:auto}
+    h2{border-left:5px solid #38bdf8; padding-left:10px}
+    .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:20px}
+    .card{background:#1e293b; padding:20px; border-radius:15px; box-shadow:0 10px 25px rgba(0,0,0,0.3); transition:.3s}
+    .card:hover{transform:translateY(-10px)}
+    .skills span{display:inline-block;background:#38bdf8;color:#0f172a;padding:8px 12px;margin:5px;border-radius:20px}
+    button{background:#38bdf8;border:none;padding:10px 20px;border-radius:10px;cursor:pointer}
+    footer{text-align:center;padding:20px;background:#020617}
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="https://via.placeholder.com/150" alt="Photo profil" style="width:150px;height:150px;border-radius:50%;object-fit:cover;margin-bottom:20px;border:4px solid #38bdf8;">
+  <h1>Audrey Syril MOKOKO</h1>
+  <p>Data Analyst | Finance | Business Intelligence</p>
+  <button onclick="downloadCV()">Télécharger mon CV</button>
+</header>
+
+<section>
+  <h2>Profil</h2>
+  <p>Data Analyst orienté performance financière, spécialisé dans la transformation de données en leviers décisionnels. Expertise en analyse KPI, visualisation et modélisation.</p>
+</section>
+
+<section>
+  <h2>Projets Data</h2>
+  <div class="grid">
+
+    <div class="card">
+      <h3>Analyse des ventes (Retail)</h3>
+      <p><strong>Objectif :</strong> Optimiser le chiffre d'affaires</p>
+      <p><strong>Outils :</strong> Excel, Power BI</p>
+      <p><strong>Résultat :</strong> +18% opportunités identifiées</p>
+    </div>
+
+    <div class="card">
+      <h3>Dashboard financier</h3>
+      <p><strong>Objectif :</strong> Suivi des KPI financiers</p>
+      <p><strong>Outils :</strong> Power BI</p>
+      <p><strong>Impact :</strong> meilleure visibilité sur la rentabilité</p>
+    </div>
+
+    <div class="card">
+      <h3>Segmentation client</h3>
+      <p><strong>Objectif :</strong> Ciblage marketing</p>
+      <p><strong>Outils :</strong> Python (Pandas)</p>
+      <p><strong>Résultat :</strong> segmentation optimisée</p>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <h2>Visualisation (Exemple)</h2>
+  <canvas id="chart"></canvas>
+</section>
+
+<section>
+  <h2>Compétences</h2>
+  <div class="skills">
+    <span>Excel Avancé</span>
+    <span>SQL</span>
+    <span>Python</span>
+    <span>Power BI</span>
+    <span>Data Visualization</span>
+  </div>
+</section>
+
+<section>
+  <h2>Contact</h2>
+  <p>Email : tonemail@example.com</p>
+  <p>LinkedIn : linkedin.com/in/tonprofil</p>
+  <p>GitHub : github.com/tonprofil</p>
+</section>
+
+<footer>
+  <p>© 2026 Audrey Syril MOKOKO</p>
+</footer>
+
+<script>
+function downloadCV(){ alert("Ajoute ton CV ici (PDF)"); }
+
+const ctx = document.getElementById('chart');
+new Chart(ctx, {
+  type: 'bar',
+  data: {
+    labels: ['Jan', 'Feb', 'Mar', 'Apr'],
+    datasets: [{ label: 'Ventes', data: [120, 190, 300, 250] }]
+  }
+});
+</script>
+
+</body>
+</html>
